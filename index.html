@@ -450,9 +450,16 @@ textarea {
             location.reload();
         }
 
-        function printChecklistTable() {
+function printChecklistTable() {
     const checklistTable = document.getElementById('checklist-table').outerHTML;
-    const styles = document.head.innerHTML; // Copy the website's styles
+    const styles = `
+        <style>
+            body { font-family: Arial, sans-serif; }
+            table { width: 100%; border-collapse: collapse; }
+            th, td { border: 1px solid #ddd; padding: 8px; }
+            th { background-color: #4CAF50; color: white; }
+        </style>
+    `;
     const newWindow = window.open("", "", "width=800,height=600");
     newWindow.document.write(`
         <html>
@@ -461,10 +468,8 @@ textarea {
             ${styles}
         </head>
         <body>
-            <div class="container">
-                <h1 class="header">Weekly Operational Checklist</h1>
-                ${checklistTable}
-            </div>
+            <h1>Checklist Table</h1>
+            ${checklistTable}
         </body>
         </html>
     `);
@@ -474,7 +479,14 @@ textarea {
 
 function printIssueReportTable() {
     const issueReportTable = document.getElementById('issue-report-table').outerHTML;
-    const styles = document.head.innerHTML; // Copy the website's styles
+    const styles = `
+        <style>
+            body { font-family: Arial, sans-serif; }
+            table { width: 100%; border-collapse: collapse; }
+            th, td { border: 1px solid #ddd; padding: 8px; }
+            th { background-color: #4CAF50; color: white; }
+        </style>
+    `;
     const newWindow = window.open("", "", "width=800,height=600");
     newWindow.document.write(`
         <html>
@@ -483,16 +495,15 @@ function printIssueReportTable() {
             ${styles}
         </head>
         <body>
-            <div class="container">
-                <h1 class="header">Issue Report</h1>
-                ${issueReportTable}
-            </div>
+            <h1>Issue Report Table</h1>
+            ${issueReportTable}
         </body>
         </html>
     `);
     newWindow.document.close();
     newWindow.print();
 }
+
         window.onload = loadData;
     </script>
 </body>
