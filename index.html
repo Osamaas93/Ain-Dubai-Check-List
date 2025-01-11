@@ -1,4 +1,4 @@
-git add .<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -451,25 +451,43 @@ textarea {
         }
 
 function printChecklistTable() {
-    const checklistTable = document.getElementById('checklist-table').outerHTML;
-    const styles = `
-        <style>
-            body { font-family: Arial, sans-serif; }
-            table { width: 100%; border-collapse: collapse; }
-            th, td { border: 1px solid #ddd; padding: 8px; }
-            th { background-color: #4CAF50; color: white; }
-        </style>
-    `;
+    const checklistTable = document.getElementById("checklist-table");
+    const rows = checklistTable.rows;
+    let tableContent = `<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">`;
+    tableContent += `<tr>${Array.from(rows[0].cells).map(cell => `<th style="border: 1px solid #ddd; padding: 8px; background-color: #4CAF50; color: white;">${cell.innerText}</th>`).join("")}</tr>`;
+
+    for (let i = 1; i < rows.length; i++) {
+        const cells = rows[i].cells;
+        tableContent += `<tr>${Array.from(cells).map((cell, index) => {
+            if (index === 1) { // Checkbox column
+                const checkbox = cell.querySelector("input[type='checkbox']");
+                return `<td style="border: 1px solid #ddd; padding: 8px;">${checkbox.checked ? "✔" : ""}</td>`;
+            } else if (index === 2) { // Signature column
+                const signature = cell.querySelector("input[type='text']").value;
+                return `<td style="border: 1px solid #ddd; padding: 8px;">${signature}</td>`;
+            } else {
+                return `<td style="border: 1px solid #ddd; padding: 8px;">${cell.innerText}</td>`;
+            }
+        }).join("")}</tr>`;
+    }
+
+    tableContent += `</table>`;
+
     const newWindow = window.open("", "", "width=800,height=600");
     newWindow.document.write(`
         <html>
         <head>
             <title>Checklist Table</title>
-            ${styles}
+            <style>
+                body { font-family: Arial, sans-serif; }
+                table { width: 100%; border-collapse: collapse; }
+                th, td { border: 1px solid #ddd; padding: 8px; }
+                th { background-color: #4CAF50; color: white; }
+            </style>
         </head>
         <body>
             <h1>Checklist Table</h1>
-            ${checklistTable}
+            ${tableContent}
         </body>
         </html>
     `);
@@ -478,31 +496,50 @@ function printChecklistTable() {
 }
 
 function printIssueReportTable() {
-    const issueReportTable = document.getElementById('issue-report-table').outerHTML;
-    const styles = `
-        <style>
-            body { font-family: Arial, sans-serif; }
-            table { width: 100%; border-collapse: collapse; }
-            th, td { border: 1px solid #ddd; padding: 8px; }
-            th { background-color: #4CAF50; color: white; }
-        </style>
-    `;
+    const issueReportTable = document.getElementById("issue-report-table");
+    const rows = issueReportTable.rows;
+    let tableContent = `<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">`;
+    tableContent += `<tr>${Array.from(rows[0].cells).map(cell => `<th style="border: 1px solid #ddd; padding: 8px; background-color: #4CAF50; color: white;">${cell.innerText}</th>`).join("")}</tr>`;
+
+    for (let i = 1; i < rows.length; i++) {
+        const cells = rows[i].cells;
+        tableContent += `<tr>${Array.from(cells).map((cell, index) => {
+            if (index === 1) { // Issue Report column
+                const issueReport = cell.querySelector("textarea").value;
+                return `<td style="border: 1px solid #ddd; padding: 8px;">${issueReport}</td>`;
+            } else if (index === 2) { // Signature column
+                const signature = cell.querySelector("input[type='text']").value;
+                return `<td style="border: 1px solid #ddd; padding: 8px;">${signature}</td>`;
+            } else {
+                return `<td style="border: 1px solid #ddd; padding: 8px;">${cell.innerText}</td>`;
+            }
+        }).join("")}</tr>`;
+    }
+
+    tableContent += `</table>`;
+
     const newWindow = window.open("", "", "width=800,height=600");
     newWindow.document.write(`
         <html>
         <head>
             <title>Issue Report Table</title>
-            ${styles}
+            <style>
+                body { font-family: Arial, sans-serif; }
+                table { width: 100%; border-collapse: collapse; }
+                th, td { border: 1px solid #ddd; padding: 8px; }
+                th { background-color: #4CAF50; color: white; }
+            </style>
         </head>
         <body>
             <h1>Issue Report Table</h1>
-            ${issueReportTable}
+            ${tableContent}
         </body>
         </html>
     `);
     newWindow.document.close();
     newWindow.print();
 }
+
 
         window.onload = loadData;
     </script>
