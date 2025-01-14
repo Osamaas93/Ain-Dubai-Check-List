@@ -79,6 +79,12 @@
 .issue-btn:hover {
     background-color: #0056b3;
 }
+
+.logo{
+    width: 50px;
+    position:absolute;
+    border-radius: 50%;
+}
 textarea {
             width: 300px;
             height: 80px;
@@ -299,6 +305,7 @@ textarea {
 </head>
 <body>
     <div class="container">
+        <img class="logo" src="images\Ain-Logo.jpg" alt="Ain Logo">
         <h1 class="header">Operational Checklist</h1>
         
         <div>
@@ -320,7 +327,7 @@ textarea {
                     <td class="signature"><input type="text" id="audio-system-signature" placeholder="Signature"></td>
                 </tr>
                 <tr>
-                    <td>Fog Machines Liquid Level</td>
+                    <td>Fog Machines Liquid Level and Functionality</td>
                     <td class="checkbox"><input type="checkbox" id="fog-machine"></td>
                     <td class="signature"><input type="text" id="fog-machine-signature" placeholder="Signature"></td>
                 </tr>
@@ -368,7 +375,7 @@ textarea {
             </thead>
             <tbody>
                 <tr>
-                    <td>Fog Machines Liquid Level</td>
+                    <td>Fog Machines Functionality</td>
                     <td><textarea id="fog-machine-report" placeholder="Enter issue report here"></textarea></td>
                     <td class="signature"><input type="text" id="fog-machine-issue-signature" placeholder="Signature"></td>
                 </tr>
@@ -383,19 +390,14 @@ textarea {
                     <td class="signature"><input type="text" id="lighting-issue-signature" placeholder="Signature"></td>
                 </tr>
                 <tr>
-                    <td>Laser and Tracker Systems</td>
+                    <td>Laser, Tracker and Trackers Grid System</td>
                     <td><textarea id="laser-report" placeholder="Enter issue report here"></textarea></td>
                     <td class="signature"><input type="text" id="laser-issue-signature" placeholder="Signature"></td>
                 </tr>
                 <tr>
-                    <td>Laser Trackers Grid</td>
+                    <td>Other Issue </td>
                     <td><textarea id="grid-report" placeholder="Enter issue report here"></textarea></td>
                     <td class="signature"><input type="text" id="grid-issue-signature" placeholder="Signature"></td>
-                </tr>
-                <tr>
-                    <td>Ensure Laser Interlock is Locked</td>
-                    <td><textarea id="interlock-report" placeholder="Enter issue report here"></textarea></td>
-                    <td class="signature"><input type="text" id="interlock-issue-signature" placeholder="Signature"></td>
                 </tr>
             </tbody>
         </table>
