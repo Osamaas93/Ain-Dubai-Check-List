@@ -1,297 +1,265 @@
-
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
 }
+
+.headerContainer {
+    padding: 20px;
+}
+
 .container {
     width: 90%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #1e1e1e; /* Dark container background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    border-radius: 12px;
 }
+
+/* Header and Logo */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    color: #ffffff; /* White header text */
+    font-weight: 600;
+}
+
+.logo {
+    width: 70px;
+    float: left;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+
+/* Date and Clear Button Section */
+#date, #day {
+    padding: 10px;
+    border: 2px solid #444; /* Darker border */
+    border-radius: 8px;
+    font-size: 1em;
+    margin-right: 10px;
+    transition: border-color 0.3s ease;
+    background-color: #333; /* Dark input background */
+    color: #e0e0e0; /* Light text */
+}
+
+#date:focus, #day:focus {
+    border-color: #4CAF50; /* Keep focus color */
+    outline: none;
+}
+
+#clear-button {
+    background-color: #e74c3c;
+    transition: background-color 0.3s ease;
+}
+
+#clear-button:hover {
+    background-color: #c0392b;
+}
+
+/* Tables */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-}
-table th, table td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd;
-}
-table th {
-    background-color: #4CAF50;
-    color: white;
-}
-.checkbox {
-    width: 100px;
-    text-align: center;
-}
-.signature {
-    width: 100px;
-    text-align: center;
+    background-color: #1e1e1e; /* Dark table background */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Darker shadow */
 }
 
-.signature input[type="text"] {
-width: 100px; /* Adjust the width as needed */
-font-size: 12px; /* Optional: adjust font size for better fit */
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #444; /* Darker border */
+    color: #e0e0e0; /* Light text */
 }
-.header {
-    text-align: center;
-    margin-bottom: 30px;
+
+.checkboxButton {
+    text-align: center; /* Horizontally center the checkbox */
+    vertical-align: middle; /* Vertically center the checkbox */
 }
-.signature-row td {
-    text-align: center;
+
+table th {
+    background-color: #333; /* Darker header background */
+    color: #ffffff; /* White header text */
+    font-weight: 600;
 }
+
+table tr:nth-child(even) {
+    background-color: #2a2a2a; /* Darker even row background */
+}
+
+table tr:hover {
+    background-color: #3a3a3a; /* Darker hover background */
+}
+
+/* Inputs and Textareas */
+input[type="text"], input[type="date"], input[type="checkbox"] {
+    padding: 8px;
+    border: 2px solid #444; /* Darker border */
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    background-color: #333; /* Dark input background */
+    color: #e0e0e0; /* Light text */
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    border-color: #4CAF50; /* Keep focus color */
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: 2px solid #444; /* Darker border */
+    border-radius: 6px;
+    font-size: 1em;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+    background-color: #333; /* Dark textarea background */
+    color: #e0e0e0; /* Light text */
+}
+
+textarea:focus {
+    border-color: #4CAF50; /* Keep focus color */
+    outline: none;
+}
+
+/* Buttons */
 .btn {
     margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
+    padding: 12px 24px;
+    background-color: #4CAF50; /* Green button */
     color: white;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
-}
-.btn:hover {
-    background-color: #45a049;
-}
-.checklist-btn {
-background-color: #007BFF; /* Green */
+    font-size: 1em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Darker shadow */
 }
 
+.btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+
+.checklist-btn {
+    background-color: #007BFF; /* Blue button */
+}
 
 .checklist-btn:hover {
-background-color: #0056b3;
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
 .issue-btn {
-background-color: #007BFF; /* Blue */
+    background-color: #007BFF; /* Blue button */
 }
 
 .issue-btn:hover {
-background-color: #0056b3;
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
-.logo{
-width: 50px;
-position:absolute;
-border-radius: 50%;
+/* Responsive Textareas in Issue Report Table */
+#issue-report-table textarea {
+    width: 100%; /* Make textarea fill the cell width */
+    height: 80px; /* Default height */
+    padding: 10px;
+    border: 2px solid #444; /* Darker border */
+    border-radius: 6px;
+    font-size: 1em;
+    resize: vertical; /* Allow vertical resizing */
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Ensure padding is included in width */
+    background-color: #333; /* Dark textarea background */
+    color: #e0e0e0; /* Light text */
 }
-textarea {
-    width: 300px;
-    height: 80px;
-    resize: vertical;
+
+#issue-report-table textarea:focus {
+    border-color: #4CAF50; /* Keep focus color */
+    outline: none;
 }
+
+/* Responsive Design */
+@media (max-width: 770px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+
+    textarea {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    input[type="text"], input[type="date"], input[type="checkbox"] {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .header {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        width: 50px;
+        top: 10px;
+        left: 10px;
+    }
+
+    #issue-report-table textarea {
+        height: 60px; /* Reduce height for smaller screens */
+        font-size: 12px; /* Smaller font size for better fit */
+        padding: 8px; /* Reduce padding to save space */
+    }
+}
+
+/* Print Styles */
 @media print {
     .btn {
         display: none;
     }
-}   
 
-@media (max-width: 770px) {
-body {
-font-size: 14px;
-margin: 0;
-padding: 0;
-}
-.container {
-width: 100%;
-padding: 10px;
-box-shadow: none;
-}
-table {
-width: 100%;
-font-size: 12px;
-border-collapse: collapse;
-}
-table th, table td {
-padding: 8px;
-text-align: left;
-}
-table th {
-background-color: #4CAF50; /* Retain header color */
-color: white;
-text-align: center;
-}
-table td {
-border: 1px solid #ddd; /* Retain borders for readability */
-}
-textarea {
-width: 100%; /* Make textarea fit mobile width */
-font-size: 12px;
-}
-input[type="text"], input[type="date"], input[type="checkbox"] {
-width: 100%; /* Expand inputs to fit screen */
-font-size: 12px;
-}
-.checkbox, .signature {
-width: auto;
-text-align: center; /* Retain alignment for checkboxes/signatures */
-}
-.btn {
-width: 100%; /* Buttons span full width */
-font-size: 14px;
-margin-bottom: 10px;
-padding: 10px;
-}
-.header {
-font-size: 16px; /* Adjust header size */
-margin-bottom: 20px;
-}
-}
-@media (max-width: 770px) {
-body {
-font-size: 14px;
-margin: 0;
-padding: 0;
-}
-.container {
-width: 100%;
-padding: 10px;
-box-shadow: none;
-}
-table {
-width: 100%;
-font-size: 12px;
-border-collapse: collapse;
-}
-table th, table td {
-padding: 8px;
-text-align: left;
-}
-table th {
-background-color: #4CAF50; /* Retain header color */
-color: white;
-text-align: center;
-}
-table td {
-border: 1px solid #ddd; /* Retain borders for readability */
-}
-textarea {
-width: 100%; /* Make textarea fit mobile width */
-font-size: 12px;
-}
-input[type="text"], input[type="date"], input[type="checkbox"] {
-width: 100%; /* Expand inputs to fit screen */
-font-size: 12px;
-}
-.checkbox, .signature {
-width: auto;
-text-align: center; /* Retain alignment for checkboxes/signatures */
-}
-.btn {
-width: 100%; /* Buttons span full width */
-font-size: 14px;
-margin-bottom: 10px;
-padding: 10px;
-}
-.header {
-font-size: 16px; /* Adjust header size */
-margin-bottom: 20px;
-}
-}
-@media (max-width: 770px) {
-body {
-font-size: 14px;
-margin: 0;
-padding: 0;
-}
-.container {
-width: 100%;
-padding: 10px;
-box-shadow: none;
-}
-table {
-width: 100%;
-font-size: 12px;
-border-collapse: collapse;
-}
-table th, table td {
-padding: 8px;
-text-align: left;
-}
-table th {
-background-color: #4CAF50; /* Retain header color */
-color: white;
-text-align: center;
-}
-table td {
-border: 1px solid #ddd; /* Retain borders for readability */
-}
-textarea {
-width: 100%; /* Make textarea fit mobile width */
-font-size: 12px;
-}
-input[type="text"], input[type="date"], input[type="checkbox"] {
-width: 100%; /* Expand inputs to fit screen */
-font-size: 12px;
-}
-.checkbox, .signature {
-width: auto;
-text-align: center; /* Retain alignment for checkboxes/signatures */
-}
-.btn {
-width: 100%; /* Buttons span full width */
-font-size: 14px;
-margin-bottom: 10px;
-padding: 10px;
-}
-.header {
-font-size: 16px; /* Adjust header size */
-margin-bottom: 20px;
-}
-}
-@media (max-width: 770px) {
-body {
-font-size: 14px;
-margin: 0;
-padding: 0;
-}
-.container {
-width: 100%;
-padding: 10px;
-box-shadow: none;
-}
-table {
-width: 100%;
-font-size: 12px;
-border-collapse: collapse;
-}
-table th, table td {
-padding: 8px;
-text-align: left;
-}
-table th {
-background-color: #4CAF50; /* Retain header color */
-color: white;
-text-align: center;
-}
-table td {
-border: 1px solid #ddd; /* Retain borders for readability */
-}
-textarea {
-width: 100%; /* Make textarea fit mobile width */
-font-size: 12px;
-}
-input[type="text"], input[type="date"], input[type="checkbox"] {
-width: 100%; /* Expand inputs to fit screen */
-font-size: 12px;
-}
-.checkbox, .signature {
-width: auto;
-text-align: center; /* Retain alignment for checkboxes/signatures */
-}
-.btn {
-width: 100%; /* Buttons span full width */
-font-size: 14px;
-margin-bottom: 10px;
-padding: 10px;
-}
-.header {
-font-size: 16px; /* Adjust header size */
-margin-bottom: 20px;
-}
-}
+    .container {
+        box-shadow: none;
+        padding: 0;
+    }
 
+    table {
+        box-shadow: none;
+    }
+}
