@@ -1,0 +1,297 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+table th {
+    background-color: #4CAF50;
+    color: white;
+}
+.checkbox {
+    width: 100px;
+    text-align: center;
+}
+.signature {
+    width: 100px;
+    text-align: center;
+}
+
+.signature input[type="text"] {
+width: 100px; /* Adjust the width as needed */
+font-size: 12px; /* Optional: adjust font size for better fit */
+}
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.signature-row td {
+    text-align: center;
+}
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #45a049;
+}
+.checklist-btn {
+background-color: #007BFF; /* Green */
+}
+
+
+.checklist-btn:hover {
+background-color: #0056b3;
+}
+
+.issue-btn {
+background-color: #007BFF; /* Blue */
+}
+
+.issue-btn:hover {
+background-color: #0056b3;
+}
+
+.logo{
+width: 50px;
+position:absolute;
+border-radius: 50%;
+}
+textarea {
+    width: 300px;
+    height: 80px;
+    resize: vertical;
+}
+@media print {
+    .btn {
+        display: none;
+    }
+}   
+
+@media (max-width: 770px) {
+body {
+font-size: 14px;
+margin: 0;
+padding: 0;
+}
+.container {
+width: 100%;
+padding: 10px;
+box-shadow: none;
+}
+table {
+width: 100%;
+font-size: 12px;
+border-collapse: collapse;
+}
+table th, table td {
+padding: 8px;
+text-align: left;
+}
+table th {
+background-color: #4CAF50; /* Retain header color */
+color: white;
+text-align: center;
+}
+table td {
+border: 1px solid #ddd; /* Retain borders for readability */
+}
+textarea {
+width: 100%; /* Make textarea fit mobile width */
+font-size: 12px;
+}
+input[type="text"], input[type="date"], input[type="checkbox"] {
+width: 100%; /* Expand inputs to fit screen */
+font-size: 12px;
+}
+.checkbox, .signature {
+width: auto;
+text-align: center; /* Retain alignment for checkboxes/signatures */
+}
+.btn {
+width: 100%; /* Buttons span full width */
+font-size: 14px;
+margin-bottom: 10px;
+padding: 10px;
+}
+.header {
+font-size: 16px; /* Adjust header size */
+margin-bottom: 20px;
+}
+}
+@media (max-width: 770px) {
+body {
+font-size: 14px;
+margin: 0;
+padding: 0;
+}
+.container {
+width: 100%;
+padding: 10px;
+box-shadow: none;
+}
+table {
+width: 100%;
+font-size: 12px;
+border-collapse: collapse;
+}
+table th, table td {
+padding: 8px;
+text-align: left;
+}
+table th {
+background-color: #4CAF50; /* Retain header color */
+color: white;
+text-align: center;
+}
+table td {
+border: 1px solid #ddd; /* Retain borders for readability */
+}
+textarea {
+width: 100%; /* Make textarea fit mobile width */
+font-size: 12px;
+}
+input[type="text"], input[type="date"], input[type="checkbox"] {
+width: 100%; /* Expand inputs to fit screen */
+font-size: 12px;
+}
+.checkbox, .signature {
+width: auto;
+text-align: center; /* Retain alignment for checkboxes/signatures */
+}
+.btn {
+width: 100%; /* Buttons span full width */
+font-size: 14px;
+margin-bottom: 10px;
+padding: 10px;
+}
+.header {
+font-size: 16px; /* Adjust header size */
+margin-bottom: 20px;
+}
+}
+@media (max-width: 770px) {
+body {
+font-size: 14px;
+margin: 0;
+padding: 0;
+}
+.container {
+width: 100%;
+padding: 10px;
+box-shadow: none;
+}
+table {
+width: 100%;
+font-size: 12px;
+border-collapse: collapse;
+}
+table th, table td {
+padding: 8px;
+text-align: left;
+}
+table th {
+background-color: #4CAF50; /* Retain header color */
+color: white;
+text-align: center;
+}
+table td {
+border: 1px solid #ddd; /* Retain borders for readability */
+}
+textarea {
+width: 100%; /* Make textarea fit mobile width */
+font-size: 12px;
+}
+input[type="text"], input[type="date"], input[type="checkbox"] {
+width: 100%; /* Expand inputs to fit screen */
+font-size: 12px;
+}
+.checkbox, .signature {
+width: auto;
+text-align: center; /* Retain alignment for checkboxes/signatures */
+}
+.btn {
+width: 100%; /* Buttons span full width */
+font-size: 14px;
+margin-bottom: 10px;
+padding: 10px;
+}
+.header {
+font-size: 16px; /* Adjust header size */
+margin-bottom: 20px;
+}
+}
+@media (max-width: 770px) {
+body {
+font-size: 14px;
+margin: 0;
+padding: 0;
+}
+.container {
+width: 100%;
+padding: 10px;
+box-shadow: none;
+}
+table {
+width: 100%;
+font-size: 12px;
+border-collapse: collapse;
+}
+table th, table td {
+padding: 8px;
+text-align: left;
+}
+table th {
+background-color: #4CAF50; /* Retain header color */
+color: white;
+text-align: center;
+}
+table td {
+border: 1px solid #ddd; /* Retain borders for readability */
+}
+textarea {
+width: 100%; /* Make textarea fit mobile width */
+font-size: 12px;
+}
+input[type="text"], input[type="date"], input[type="checkbox"] {
+width: 100%; /* Expand inputs to fit screen */
+font-size: 12px;
+}
+.checkbox, .signature {
+width: auto;
+text-align: center; /* Retain alignment for checkboxes/signatures */
+}
+.btn {
+width: 100%; /* Buttons span full width */
+font-size: 14px;
+margin-bottom: 10px;
+padding: 10px;
+}
+.header {
+font-size: 16px; /* Adjust header size */
+margin-bottom: 20px;
+}
+}
+

@@ -1,317 +1,24 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operational Checklist</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 90%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        table th, table td {
-            padding: 10px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-        table th {
-            background-color: #4CAF50;
-            color: white;
-        }
-        .checkbox {
-            width: 100px;
-            text-align: center;
-        }
-        .signature {
-            width: 100px;
-            text-align: center;
-        }
-
-        .signature input[type="text"] {
-    width: 100px; /* Adjust the width as needed */
-    font-size: 12px; /* Optional: adjust font size for better fit */
-}
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .signature-row td {
-            text-align: center;
-        }
-        .btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background-color: #45a049;
-        }
-        .checklist-btn {
-    background-color: #007BFF; /* Green */
-}
-
-
-.checklist-btn:hover {
-    background-color: #0056b3;
-}
-
-.issue-btn {
-    background-color: #007BFF; /* Blue */
-}
-
-.issue-btn:hover {
-    background-color: #0056b3;
-}
-
-.logo{
-    width: 50px;
-    position:absolute;
-    border-radius: 50%;
-}
-textarea {
-            width: 300px;
-            height: 80px;
-            resize: vertical;
-        }
-        @media print {
-            .btn {
-                display: none;
-            }
-        }   
-
-        @media (max-width: 770px) {
-    body {
-        font-size: 14px;
-        margin: 0;
-        padding: 0;
-    }
-    .container {
-        width: 100%;
-        padding: 10px;
-        box-shadow: none;
-    }
-    table {
-        width: 100%;
-        font-size: 12px;
-        border-collapse: collapse;
-    }
-    table th, table td {
-        padding: 8px;
-        text-align: left;
-    }
-    table th {
-        background-color: #4CAF50; /* Retain header color */
-        color: white;
-        text-align: center;
-    }
-    table td {
-        border: 1px solid #ddd; /* Retain borders for readability */
-    }
-    textarea {
-        width: 100%; /* Make textarea fit mobile width */
-        font-size: 12px;
-    }
-    input[type="text"], input[type="date"], input[type="checkbox"] {
-        width: 100%; /* Expand inputs to fit screen */
-        font-size: 12px;
-    }
-    .checkbox, .signature {
-        width: auto;
-        text-align: center; /* Retain alignment for checkboxes/signatures */
-    }
-    .btn {
-        width: 100%; /* Buttons span full width */
-        font-size: 14px;
-        margin-bottom: 10px;
-        padding: 10px;
-    }
-    .header {
-        font-size: 16px; /* Adjust header size */
-        margin-bottom: 20px;
-    }
-}
-@media (max-width: 770px) {
-    body {
-        font-size: 14px;
-        margin: 0;
-        padding: 0;
-    }
-    .container {
-        width: 100%;
-        padding: 10px;
-        box-shadow: none;
-    }
-    table {
-        width: 100%;
-        font-size: 12px;
-        border-collapse: collapse;
-    }
-    table th, table td {
-        padding: 8px;
-        text-align: left;
-    }
-    table th {
-        background-color: #4CAF50; /* Retain header color */
-        color: white;
-        text-align: center;
-    }
-    table td {
-        border: 1px solid #ddd; /* Retain borders for readability */
-    }
-    textarea {
-        width: 100%; /* Make textarea fit mobile width */
-        font-size: 12px;
-    }
-    input[type="text"], input[type="date"], input[type="checkbox"] {
-        width: 100%; /* Expand inputs to fit screen */
-        font-size: 12px;
-    }
-    .checkbox, .signature {
-        width: auto;
-        text-align: center; /* Retain alignment for checkboxes/signatures */
-    }
-    .btn {
-        width: 100%; /* Buttons span full width */
-        font-size: 14px;
-        margin-bottom: 10px;
-        padding: 10px;
-    }
-    .header {
-        font-size: 16px; /* Adjust header size */
-        margin-bottom: 20px;
-    }
-}
-@media (max-width: 770px) {
-    body {
-        font-size: 14px;
-        margin: 0;
-        padding: 0;
-    }
-    .container {
-        width: 100%;
-        padding: 10px;
-        box-shadow: none;
-    }
-    table {
-        width: 100%;
-        font-size: 12px;
-        border-collapse: collapse;
-    }
-    table th, table td {
-        padding: 8px;
-        text-align: left;
-    }
-    table th {
-        background-color: #4CAF50; /* Retain header color */
-        color: white;
-        text-align: center;
-    }
-    table td {
-        border: 1px solid #ddd; /* Retain borders for readability */
-    }
-    textarea {
-        width: 100%; /* Make textarea fit mobile width */
-        font-size: 12px;
-    }
-    input[type="text"], input[type="date"], input[type="checkbox"] {
-        width: 100%; /* Expand inputs to fit screen */
-        font-size: 12px;
-    }
-    .checkbox, .signature {
-        width: auto;
-        text-align: center; /* Retain alignment for checkboxes/signatures */
-    }
-    .btn {
-        width: 100%; /* Buttons span full width */
-        font-size: 14px;
-        margin-bottom: 10px;
-        padding: 10px;
-    }
-    .header {
-        font-size: 16px; /* Adjust header size */
-        margin-bottom: 20px;
-    }
-}
-@media (max-width: 770px) {
-    body {
-        font-size: 14px;
-        margin: 0;
-        padding: 0;
-    }
-    .container {
-        width: 100%;
-        padding: 10px;
-        box-shadow: none;
-    }
-    table {
-        width: 100%;
-        font-size: 12px;
-        border-collapse: collapse;
-    }
-    table th, table td {
-        padding: 8px;
-        text-align: left;
-    }
-    table th {
-        background-color: #4CAF50; /* Retain header color */
-        color: white;
-        text-align: center;
-    }
-    table td {
-        border: 1px solid #ddd; /* Retain borders for readability */
-    }
-    textarea {
-        width: 100%; /* Make textarea fit mobile width */
-        font-size: 12px;
-    }
-    input[type="text"], input[type="date"], input[type="checkbox"] {
-        width: 100%; /* Expand inputs to fit screen */
-        font-size: 12px;
-    }
-    .checkbox, .signature {
-        width: auto;
-        text-align: center; /* Retain alignment for checkboxes/signatures */
-    }
-    .btn {
-        width: 100%; /* Buttons span full width */
-        font-size: 14px;
-        margin-bottom: 10px;
-        padding: 10px;
-    }
-    .header {
-        font-size: 16px; /* Adjust header size */
-        margin-bottom: 20px;
-    }
-}
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <img class="logo" src="images\Ain-Logo.jpg" alt="Ain Logo">
+        <img class="logo" src="images/Ain-Logo.jpg" alt="Ain Logo">
         <h1 class="header">Operational Checklist</h1>
         
         <div>
+            <input type="date" id="date">
             <input type="text" id="day" placeholder="Set The Day">
-            <input type="date" id="date" placeholder="Select the Date">
+            <button class="btn" id="clear-button">Clear Data</button>
         </div>
+        <p id="selected-date">Selected date is: </p>
+
         <table id="checklist-table">
             <thead>
                 <tr>
@@ -320,46 +27,36 @@ textarea {
                     <th>Signature</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="checklist-table-body">
                 <tr>
                     <td>Audio System Functionality</td>
-                    <td class="checkbox"><input type="checkbox" id="audio-system"></td>
-                    <td class="signature"><input type="text" id="audio-system-signature" placeholder="Signature"></td>
+                    <td><input type="checkbox" id="audio-system-checkbox"></td>
+                    <td><input type="text" id="audio-system-signature" placeholder="Signature"></td>
                 </tr>
                 <tr>
                     <td>Fog Machines Liquid Level and Functionality</td>
-                    <td class="checkbox"><input type="checkbox" id="fog-machine"></td>
-                    <td class="signature"><input type="text" id="fog-machine-signature" placeholder="Signature"></td>
+                    <td><input type="checkbox" id="fog-machine-checkbox"></td>
+                    <td><input type="text" id="fog-machine-signature" placeholder="Signature"></td>
                 </tr>
                 <tr>
-                    <td>Screens (mesh and curved)</td>
-                    <td class="checkbox"><input type="checkbox" id="screens"></td>
-                    <td class="signature"><input type="text" id="screens-signature" placeholder="Signature"></td>
+                    <td>Screens (Mesh and Curved) Functionality</td>
+                    <td><input type="checkbox" id="screens-checkbox"></td>
+                    <td><input type="text" id="screens-signature" placeholder="Signature"></td>
                 </tr>
                 <tr>
-                    <td>Lighting Functionality</td>
-                    <td class="checkbox"><input type="checkbox" id="lighting"></td>
-                    <td class="signature"><input type="text" id="lighting-signature" placeholder="Signature"></td>
+                    <td>Lighting System Functionality</td>
+                    <td><input type="checkbox" id="lighting-checkbox"></td>
+                    <td><input type="text" id="lighting-signature" placeholder="Signature"></td>
                 </tr>
                 <tr>
-                    <td>Laser and Tracker Systems</td>
-                    <td class="checkbox"><input type="checkbox" id="laser"></td>
-                    <td class="signature"><input type="text" id="laser-signature" placeholder="Signature"></td>
+                    <td>Laser Effects Functionality</td>
+                    <td><input type="checkbox" id="laser-checkbox"></td>
+                    <td><input type="text" id="laser-signature" placeholder="Signature"></td>
                 </tr>
                 <tr>
-                    <td>Laser Trackers Grid</td>
-                    <td class="checkbox"><input type="checkbox" id="grid"></td>
-                    <td class="signature"><input type="text" id="grid-signature" placeholder="Signature"></td>
-                </tr>
-                <tr>
-                    <td>Ensure Laser Interlock is Locked</td>
-                    <td class="checkbox"><input type="checkbox" id="interlock"></td>
-                    <td class="signature"><input type="text" id="interlock-signature" placeholder="Signature"></td>
-                </tr>
-                <tr>
-                    <td>Lighting on Sleep Mode</td>
-                    <td class="checkbox"><input type="checkbox" id="sleep-mode"></td>
-                    <td class="signature"><input type="text" id="sleep-mode-signature" placeholder="Signature"></td>
+                    <td>Stage Equipment Check</td>
+                    <td><input type="checkbox" id="stage-equipment-checkbox"></td>
+                    <td><input type="text" id="stage-equipment-signature" placeholder="Signature"></td>
                 </tr>
             </tbody>
         </table>
@@ -402,147 +99,20 @@ textarea {
             </tbody>
         </table>
         
-        <button class="btn" onclick="saveData()">Save Data</button>
-        <button class="btn" onclick="clearData()">Clear Data</button>
-        <button class="btn checklist-btn" onclick="printChecklistTable()">Print Checklist Table</button>
-        <button class="btn issue-btn" onclick="printIssueReportTable()">Print Issue Report Table</button>
+
+        <button class="btn" id="save-button">Save Data</button>
+
+        <button class="btn checklist-btn" id="print-checklist">Print Checklist Table</button>
+        <button class="btn issue-btn" id="print-issue">Print Issue Report Table</button>
+        
     </div>
 
-    <script>
-        function saveData() {
-            const checklistData = {
-                day: document.getElementById('day').value,
-                date: document.getElementById('date').value,
-                checklist: Array.from(document.querySelectorAll('#checklist-table tbody tr')).map(row => ({
-                    checkbox: row.querySelector('input[type="checkbox"]').checked,
-                    signature: row.querySelector('input[type="text"]').value
-                })),
-                issueReport: Array.from(document.querySelectorAll('#issue-report-table tbody tr')).map(row => ({
-                    report: row.querySelector('textarea').value,
-                    signature: row.querySelector('input[type="text"]').value
-                }))
-            };
-            localStorage.setItem('checklistData', JSON.stringify(checklistData));
-            alert("Data saved successfully!");
-        }
+    <!-- Import Firebase SDK v10.7.1 and other modules -->
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="script.js"></script>
 
-        function loadData() {
-            const savedData = localStorage.getItem('checklistData');
-            if (savedData) {
-                const data = JSON.parse(savedData);
-                document.getElementById('day').value = data.day || '';
-                document.getElementById('date').value = data.date || '';
-
-                const checklistRows = document.querySelectorAll('#checklist-table tbody tr');
-                data.checklist.forEach((item, index) => {
-                    checklistRows[index].querySelector('input[type="checkbox"]').checked = item.checkbox || false;
-                    checklistRows[index].querySelector('input[type="text"]').value = item.signature || '';
-                });
-
-                const issueReportRows = document.querySelectorAll('#issue-report-table tbody tr');
-                data.issueReport.forEach((item, index) => {
-                    issueReportRows[index].querySelector('textarea').value = item.report || '';
-                    issueReportRows[index].querySelector('input[type="text"]').value = item.signature || '';
-                });
-            }
-        }
-
-        function clearData() {
-            localStorage.removeItem('checklistData');
-            location.reload();
-        }
-
-function printChecklistTable() {
-    const checklistTable = document.getElementById("checklist-table");
-    const rows = checklistTable.rows;
-    let tableContent = `<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">`;
-    tableContent += `<tr>${Array.from(rows[0].cells).map(cell => `<th style="border: 1px solid #ddd; padding: 8px; background-color: #4CAF50; color: white;">${cell.innerText}</th>`).join("")}</tr>`;
-
-    for (let i = 1; i < rows.length; i++) {
-        const cells = rows[i].cells;
-        tableContent += `<tr>${Array.from(cells).map((cell, index) => {
-            if (index === 1) { // Checkbox column
-                const checkbox = cell.querySelector("input[type='checkbox']");
-                return `<td style="border: 1px solid #ddd; padding: 8px;">${checkbox.checked ? "✔" : ""}</td>`;
-            } else if (index === 2) { // Signature column
-                const signature = cell.querySelector("input[type='text']").value;
-                return `<td style="border: 1px solid #ddd; padding: 8px;">${signature}</td>`;
-            } else {
-                return `<td style="border: 1px solid #ddd; padding: 8px;">${cell.innerText}</td>`;
-            }
-        }).join("")}</tr>`;
-    }
-
-    tableContent += `</table>`;
-
-    const newWindow = window.open("", "", "width=800,height=600");
-    newWindow.document.write(`
-        <html>
-        <head>
-            <title>Checklist Table</title>
-            <style>
-                body { font-family: Arial, sans-serif; }
-                table { width: 100%; border-collapse: collapse; }
-                th, td { border: 1px solid #ddd; padding: 8px; }
-                th { background-color: #4CAF50; color: white; }
-            </style>
-        </head>
-        <body>
-            <h1>Checklist Table</h1>
-            ${tableContent}
-        </body>
-        </html>
-    `);
-    newWindow.document.close();
-    newWindow.print();
-}
-
-function printIssueReportTable() {
-    const issueReportTable = document.getElementById("issue-report-table");
-    const rows = issueReportTable.rows;
-    let tableContent = `<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">`;
-    tableContent += `<tr>${Array.from(rows[0].cells).map(cell => `<th style="border: 1px solid #ddd; padding: 8px; background-color: #4CAF50; color: white;">${cell.innerText}</th>`).join("")}</tr>`;
-
-    for (let i = 1; i < rows.length; i++) {
-        const cells = rows[i].cells;
-        tableContent += `<tr>${Array.from(cells).map((cell, index) => {
-            if (index === 1) { // Issue Report column
-                const issueReport = cell.querySelector("textarea").value;
-                return `<td style="border: 1px solid #ddd; padding: 8px;">${issueReport}</td>`;
-            } else if (index === 2) { // Signature column
-                const signature = cell.querySelector("input[type='text']").value;
-                return `<td style="border: 1px solid #ddd; padding: 8px;">${signature}</td>`;
-            } else {
-                return `<td style="border: 1px solid #ddd; padding: 8px;">${cell.innerText}</td>`;
-            }
-        }).join("")}</tr>`;
-    }
-
-    tableContent += `</table>`;
-
-    const newWindow = window.open("", "", "width=800,height=600");
-    newWindow.document.write(`
-        <html>
-        <head>
-            <title>Issue Report Table</title>
-            <style>
-                body { font-family: Arial, sans-serif; }
-                table { width: 100%; border-collapse: collapse; }
-                th, td { border: 1px solid #ddd; padding: 8px; }
-                th { background-color: #4CAF50; color: white; }
-            </style>
-        </head>
-        <body>
-            <h1>Issue Report Table</h1>
-            ${tableContent}
-        </body>
-        </html>
-    `);
-    newWindow.document.close();
-    newWindow.print();
-}
-
-
-        window.onload = loadData;
-    </script>
+    
 </body>
+
+
+</html>
