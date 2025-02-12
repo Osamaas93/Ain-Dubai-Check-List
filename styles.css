@@ -13,7 +13,7 @@ body {
 
 .container {
     width: 90%;
-    max-width: 1200px;
+   /* max-width: 1200px; */
     margin: 20px auto;
     padding: 30px;
     background-color: #1e1e1e; /* Dark container background */
@@ -118,6 +118,10 @@ input[type="text"]:focus, input[type="date"]:focus {
     outline: none;
 }
 
+.dateBox{
+    display: flex;
+}
+
 textarea {
     width: 100%;
     height: 80px;
@@ -138,7 +142,22 @@ textarea:focus {
 
 /* Buttons */
 .btn {
-    margin-top: 20px;
+    margin-bottom: 12px;
+    padding: 12px 24px;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+.taskName{
+    width: 20%;
+}
+.clearBtn{
     padding: 12px 24px;
     background-color: #4CAF50; /* Green button */
     color: white;
@@ -165,6 +184,7 @@ textarea:focus {
     background-color: #0056b3; /* Darker blue on hover */
 }
 
+
 .issue-btn {
     background-color: #007BFF; /* Blue button */
 }
@@ -186,6 +206,7 @@ textarea:focus {
     box-sizing: border-box; /* Ensure padding is included in width */
     background-color: #333; /* Dark textarea background */
     color: #e0e0e0; /* Light text */
+    min-width: 300px;
 }
 
 #issue-report-table textarea:focus {
@@ -204,6 +225,13 @@ textarea:focus {
         padding: 15px;
         box-shadow: none;
     }
+    .dateBox{
+        display: flex;
+    }
+    .taskName{
+        text-wrap: wrap;
+        max-width: 50px;
+    }
 
     table {
         font-size: 12px;
@@ -219,14 +247,21 @@ textarea:focus {
     }
 
     input[type="text"], input[type="date"], input[type="checkbox"] {
-        width: 100%;
         font-size: 12px;
+    }
+    .clearBtn{
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .signature input{
+        max-width: 55px;
     }
 
     .btn {
         width: 100%;
         font-size: 14px;
-        margin-bottom: 10px;
         padding: 10px;
     }
 
@@ -245,6 +280,7 @@ textarea:focus {
         height: 60px; /* Reduce height for smaller screens */
         font-size: 12px; /* Smaller font size for better fit */
         padding: 8px; /* Reduce padding to save space */
+        min-width: 100px;
     }
 }
 

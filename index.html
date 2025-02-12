@@ -13,51 +13,51 @@
         <img class="logo" src="images/Ain-Logo.jpg" alt="Ain Logo">
         <h1 class="header">Operational Checklist</h1>
     </div>
-        <div>
+        <div class="dateBox">
             <input type="date" id="date">
             <input type="text" id="day" placeholder="Set The Day">
-            <button class="btn" id="clear-button">Clear Data</button>
+            <button class="clearBtn" id="clear-button">Clear Data</button>
         </div>
         <p id="selected-date">Selected date is: </p>
 
         <table id="checklist-table">
             <thead>
                 <tr>
-                    <th>Procedure</th>
-                    <th>Checkbox</th>
-                    <th>Signature</th>
+                    <th >Procedure</th>
+                    <th class="taskName">Checkbox</th>
+                    <th class="taskName">Signature</th>
                 </tr>
             </thead>
             <tbody id="checklist-table-body">
                 <tr>
                     <td>Audio System Functionality</td>
                     <td class="checkboxButton"><input type="checkbox"  id="audio-system-checkbox"></td>
-                    <td><input type="text" id="audio-system-signature" placeholder="Signature"></td>
+                    <td class="signature"><input type="text" id="audio-system-signature" placeholder="Signature"></td>
                 </tr>
                 <tr>
                     <td>Fog Machines Liquid Level and Functionality</td>
                     <td class="checkboxButton"><input type="checkbox" id="fog-machine-checkbox"></td>
-                    <td><input type="text" id="fog-machine-signature" placeholder="Signature"></td>
+                    <td class="signature"><input type="text" id="fog-machine-signature" placeholder="Signature"></td>
                 </tr>
                 <tr>
                     <td>Screens (Mesh and Curved) Functionality</td>
                     <td class="checkboxButton"><input type="checkbox" id="screens-checkbox"></td>
-                    <td><input type="text" id="screens-signature" placeholder="Signature"></td>
+                    <td class="signature"><input type="text" id="screens-signature" placeholder="Signature"></td>
                 </tr>
                 <tr>
                     <td>Lighting System Functionality</td>
                     <td class="checkboxButton"><input type="checkbox" id="lighting-checkbox"></td>
-                    <td><input type="text" id="lighting-signature" placeholder="Signature"></td>
+                    <td class="signature"><input type="text" id="lighting-signature" placeholder="Signature"></td>
                 </tr>
                 <tr>
                     <td>Laser Effects Functionality</td>
                     <td class="checkboxButton"><input type="checkbox" id="laser-checkbox"></td>
-                    <td><input type="text" id="laser-signature" placeholder="Signature"></td>
+                    <td class="signature"><input type="text" id="laser-signature" placeholder="Signature"></td>
                 </tr>
                 <tr>
                     <td>Stage Equipment Check</td>
                     <td class="checkboxButton"><input type="checkbox" id="stage-equipment-checkbox"></td>
-                    <td><input type="text" id="stage-equipment-signature" placeholder="Signature"></td>
+                    <td class="signature"><input type="text" id="stage-equipment-signature" placeholder="Signature"></td>
                 </tr>
             </tbody>
         </table>
@@ -66,9 +66,9 @@
         <table id="issue-report-table">
             <thead>
                 <tr>
-                    <th>Procedure</th>
+                    <th class="taskName">Procedure</th>
                     <th>Issue Report</th>
-                    <th>Signature</th>
+                    <th class="taskName">Signature</th>
                 </tr>
             </thead>
             <tbody>
